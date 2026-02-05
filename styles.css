@@ -1,0 +1,244 @@
+/* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+body {
+  margin: 0;
+  font-family: 'Appetite', system-ui, sans-serif;
+  color: #ffb100;
+  letter-spacing: 1.5px;
+  text-shadow:
+    -3px -3px 0 #000,
+     3px -3px 0 #000,
+    -3px  3px 0 #000,
+     3px  3px 0 #000;
+  min-height: 100vh;
+
+  background-color: #e7be88; /* цвет пергамента */
+
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0)), url('orun2.jpg'),
+    linear-gradient(to left, rgba(0,0,0,0.4), rgba(0,0,0,0)), url('orun2.jpg');  
+
+  background-repeat: no-repeat, repeat-y, no-repeat, repeat-y;
+  background-position: left top, left top, right top, right top;
+  background-size: 300px auto, 300px auto, 300px auto, 300px auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  background: none;
+  backdrop-filter: none;
+}
+
+.logo-img {
+  max-width: 1000px;
+  width: 90%;
+  border-radius: 20px;
+}
+
+.slogan {
+  color: #ffb100;
+  font-size: 42px;
+  margin-top: 10px;
+}
+
+/* ===== ОСНОВА ===== */
+.paper {
+  width: 1000px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background: none;
+  border-radius: 20px;
+}
+
+/* ===== КАТЕГОРИИ ===== */
+.category h2 {
+  font-size: 72px;
+  margin-top: 30px;
+}
+
+/* ===== СЕТКА ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+/* ===== КАРТОЧКА ===== */
+.card {
+  background: #4b2a17;
+  font-size: 24px;
+  color: #fff;
+  padding: 9px;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 2px #b88a44;
+  max-width: 240px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* ===== ФОТО ТОВАРА ===== */
+.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #2a160c;
+}
+
+/* ===== ТЕКСТ ===== */
+.card .name {
+  font-weight: 600;
+  text-align: center;
+}
+
+.card .meta {
+  opacity: 0.85;
+  margin: 6px 0;
+  text-align: center;
+}
+
+.card .price {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ===== КНОПКА ===== */
+.card button {
+  margin-top: auto;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #c97a1c;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+/* ===== КОНТАКТЫ ===== */
+.contacts h2 {
+  margin-top: 16px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.branches-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.branch {
+  background: #fff;
+  padding: 14px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  border-radius: 12px;
+
+  color: #ffb100;
+  text-shadow: none;
+}
+
+.branch.accent {
+  border: 3px solid #c97a1c;
+  letter-spacing: 3px;
+  font-size: 22px;
+  border-radius: 12px;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 1080px) {
+  .paper {
+    width: 90%;
+  }
+}
+
+/* ===== МОБИЛЬНЫЙ ВАРИАНТ ===== */
+@media (max-width: 600px) {
+  .header {
+    padding: 15px 10px;
+  }
+
+  .logo-img {
+    width: 95%;
+  }
+
+  .slogan {
+    font-size: 28px;
+    margin-top: 5px;
+  }
+
+  .paper {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .category h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .product-img {
+    height: 200px;
+  }
+
+  .card .name {
+    font-size: 20px;
+  }
+
+  .card .meta, .card .price {
+    font-size: 18px;
+  }
+
+  .card button {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .contacts h2, .branches-wrapper {
+    width: 95%;
+    text-align: center;
+  }
+
+  .branch {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .branch.accent {
+    font-size: 18px;
+  }
+}
