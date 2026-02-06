@@ -242,3 +242,17 @@ body {
     font-size: 18px;
   }
 }
+   .order-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #8b2c1c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.order-btn:hover {
+  background: #a33a28;
+}
